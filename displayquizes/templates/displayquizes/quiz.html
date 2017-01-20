@@ -1,0 +1,44 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+{% include "topbar.html" %}
+<html>
+<head>
+	<title>Quiz details</title>
+</head>
+<body>
+	<h3>{{ quiz_data.QuizName }} quiz 
+	{% if user.groups.all.0.name != "student" %}
+	(<a href="/quizes/{{ quiz_data.id }}/rm">delete</a>, <a href="/quizes/{{ quiz_data.id }}/make">make exam file</a>)
+	{% endif %}
+	{% if file_exists %}
+		<br>(<a href="/quizes/{{ quiz_data.id }}/download">Download exam</a>)
+	{% endif %}
+	</h3>
+	For course <a href="/courses/{{quiz_data.course.id}}">{{quiz_data.course}}</a><br>
+	Created {{ quiz_data.QuizDate }} <br>
+	Description: {{ quiz_data.QuizDescription }}<br>
+	Author: {{ quiz_data.Author }}
+	<h5>Instructions 
+	{% if user.groups.all.0.name != "student" %}
+		(<a href="/quizes/addinstr">add</a>)
+	{% endif %}:</h5>
+	<ul>
+	{% for instr in all_instructions %}
+	<li>{{ instr.name }} (<a href="/quizes/rminstr/{{ instr.id }}">delete</a>)</li><br>
+	{% endfor %}
+	</ul>
+	<h5>Questions 
+	{% if user.groups.all.0.name != "student" %}
+		(<a href="/quizes/{{quiz_data.id}}/addquestion">add</a>)
+	{% endif %}:</h5>
+	<ul>
+	{% for question in all_questions %}
+	<li>{{ question.Type }}: {{ question.Question }}
+	{% if user.groups.all.0.name != "student" %}
+		(<a href="/quizes/rmquestion/{{ question.id }}">delete</a>)
+	{% endif %}
+	</li><br>
+	{% endfor %}
+	</ul>
+</body>
+</html>

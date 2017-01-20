@@ -1,0 +1,9 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+{% include "topbar.html" %}
+<h3>List of quizes</h3>
+<ul>
+	{% for quiz in all_quizes %}
+		<li><a href="{% url 'quiz' quiz.id %}">{{ quiz.QuizName }}</a></li>
+	{% endfor %}
+</ul>

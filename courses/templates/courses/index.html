@@ -1,0 +1,10 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+{% include "topbar.html" %}
+
+<h3>List of courses</h3>
+<ul>
+	{% for course in all_courses %}
+		<li><a href="/courses/{{ course.id }}/">{{ course.name }}</a></li>
+	{% endfor %}
+</ul>

@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+{% include "topbar.html" %}
+
+<h3>User: {{ user_data.username }}</h3>
+{% if user.groups.all.0.name == "admin" %}
+	<a href="/users/{{user_data.id}}/mkteacher">Make teacher </a><br>
+{% endif %}
+{% if user.groups.all.0.name != "student" %}
+	<a href="/courses/addstudent"> Add to course as listener</a><br>
+{% endif %}<br>
+Group: {{ user_data.groups.all.0.name }}<br>
+Date joined: {{ user_data.date_joined }} <br>
+<h5>Courses:</h5>
+<ul>
+{% for course in all_courses %}
+<li><a href="/courses/{{course.id}}">{{ course.name }}</a></li><br>
+{% endfor %}
+</ul>
+</ul>

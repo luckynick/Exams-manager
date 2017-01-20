@@ -1,0 +1,16 @@
+.topbar li
+{
+	float: left; 
+	margin: 0 10px 0 10px;
+	list-style-type: none;
+}
+.topbar ul
+{
+	padding: 0;
+	margin: 0 0 0 0;
+}
+.topbar{
+	padding: 0;
+	margin: 0 0 0 0;
+	background-color: green;
+}

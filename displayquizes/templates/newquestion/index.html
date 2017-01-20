@@ -1,0 +1,9 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+{% include "topbar.html" %}
+<h3>Select type of question:</h3>
+<ul>
+	{% for type in all_types %}
+		<li><a href="{{ type.name }}">{{ type.name }}</a></li>
+	{% endfor %}
+</ul>

@@ -1,0 +1,20 @@
+<title>Exams platform</title>
+<div class="topbar">
+	<ul>
+	<li><a href="/">Main page</a></li>
+	{% if user.is_authenticated %}
+		<li><a href="/courses">Courses</a></li>
+		<li><a href="/users">Users</a></li>
+	{% endif %}
+	{% if user.groups.all.0.name != "student" and user.is_authenticated %}
+		<li><a href="/courses/add">Create course </a></li>
+		<li><a href="/quizes/add">Add new exam </a></li>
+	{% endif %}
+	{% if user.is_authenticated %}
+		<li style="float: right;"><a href="/logout/">Log out </a>(<a href="/users/{{user.id}}">{{ user.username }}</a>)</li>
+	{% endif %}
+	{% if not user.is_authenticated %}
+		<li style="float: right;">Not logged in</li>
+	{% endif %}
+	</ul>
+</div><br>

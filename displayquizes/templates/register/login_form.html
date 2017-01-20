@@ -1,0 +1,8 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+{% include "topbar.html" %}
+<form action="" method="POST">
+	{% csrf_token %}
+	{% include 'register/form_template.html' %}
+	<br><button type="submit">Login</button>
+</form>

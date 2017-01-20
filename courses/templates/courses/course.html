@@ -1,0 +1,37 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+{% include "topbar.html" %}
+
+<h3>{{ course_data.name }} course</h3>
+{% if user.groups.all.0.name == "admin" %}
+	<a href="/courses/{{course_data.id}}/rm">Delete</a><br>
+{% endif %}
+Created {{ course_data.date }} <br>
+Description: {{ course_data.description }}<br>
+Author: <a href="">{{ course_data.author }}</a>
+<h5>Quizes for this course 
+{% if user.groups.all.0.name != "student" %}
+	(<a href="/quizes/add">add quiz</a>)
+{% endif %}
+:</h5>
+<ul>
+{% for quiz in all_quizes %}
+<li><a href="/quizes/{{ quiz.id }}/">{{ quiz.QuizName }}</a></li><br>
+{% endfor %}
+</ul>
+<h5>Course lecturers
+{% if user.groups.all.0.name != "student" %}
+	(<a href="/courses/addteacher">add teacher</a>)
+{% endif %}
+:</h5>
+<ul>
+{% for lecturer in all_teachers %}
+<li><a href="/users/{{ lecturer.user.id }}/">{{ lecturer.user }}</a></li><br>
+{% endfor %}
+</ul>
+<h5>Course listeners (<a href="/courses/addstudent">add students</a>):</h5>
+<ul>
+{% for listener in all_listeners %}
+<li><a href="/users/{{ listener.user.id }}/">{{ listener.user }}</a></li><br>
+{% endfor %}
+</ul>

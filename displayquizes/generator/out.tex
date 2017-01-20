@@ -1,0 +1,382 @@
+\nonstopmode
+\documentclass{report}
+
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{exsheets}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{setspace}
+
+\usepackage{amssymb}
+
+\pagestyle{fancy}
+\fancyheadoffset{0in}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+\setlength{\oddsidemargin}{0pt}
+\setlength{\textwidth}{460pt} %442
+
+
+\newcommand\draftinfo{
+Computers}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[C]{\bfseries \draftinfo}
+\fancyhead[LO]{\sf\rightmark}
+\fancyhead[RE]{\sf\leftmark}
+\fancypagestyle{plain}{%
+  \fancyhead{} % get rid of headers
+  \renewcommand{\headrulewidth}{0pt} % and the line
+}
+
+\usepackage{etoolbox}
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+
+\begin{document}
+
+\title{
+Computers}
+
+\date{
+2017-01-06 17:20}
+\vfill
+\author{
+Mykyta Moiseienko}
+\maketitle
+\clearpage
+
+\chapter{Introduction}
+
+%\chapter{Introduction}
+%\section{General info}
+%Chapters 2-6 are tasks. Feel free to make your notations in this chapters since they are not treated as answers and not taken into account in process of evaluation. Answers to chapters 2, 3 and 4 are checked by computer. Answers to chapter 5 and 6 are checked by human. Section 7 is dedicated for filling in the answers.
+
+
+\SetupExSheets{headings=runin}
+\chapter{}
+Place cross in checkbox corresponding to correct answer. Read all questions carefully and make considered decisions.\\\\
+
+\begin{question}[type=exam]
+T1
+\begin{enumerate}[a)]
+\item T2
+\item T4
+\item T5
+\item T6
+\item T3
+\end{enumerate}
+\end{question}
+\begin{solution}
+T3
+\end{solution}
+
+\begin{question}[type=exam]
+Is it nice?\\
+T) True\\ 
+F) False
+\end{question}
+\begin{solution}
+False
+\end{solution}
+
+%\begin{question}[type=exam]
+%What is the best animal?
+%\begin{enumerate}[a)]
+%\item Dog
+%\item Cat
+%\item Elephant
+%\end{enumerate}
+%\end{question}
+%\begin{solution}
+%Dog
+%\end{solution}
+
+
+
+\chapter{}
+Each question contains 4 subquestions. You have to set connection from subquestion on left side to unique answer on right side.\\\\
+
+\begin{question}[type=exam]
+Wat?\\
+\begin{minipage}{0.45\textwidth}
+\begin{enumerate}
+\item Q3
+\item Q4
+\item Q2
+\item Q1
+\end{enumerate}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{tabular}{|p{\textwidth}}
+\begin{enumerate}[a)]
+\item A3
+\item AR
+\item A2
+\item A1
+\item A4
+\end{enumerate}
+\end{tabular}
+\end{minipage}
+\end{question}
+\begin{solution}
+Q2 corresponds to A2, Q3 corresponds to A3, Q4 corresponds to A4, Q1 corresponds to A1
+\end{solution}
+%\begin{question}[type=exam]
+%Match historical events with corresponding dates.\\
+%\begin{minipage}{0.45\textwidth}
+%Event
+%\begin{enumerate}
+  %\item Jesus was born
+  %\item Second World War began
+	%\item Madagascar cartoon appeared in cinema
+  %\item Second era started
+%\end{enumerate}
+%\end{minipage}
+%\hfill  %?
+%\begin{minipage}{0.45\textwidth}
+%\begin{tabular}{|p{\textwidth}}
+%Year
+%\begin{enumerate}[a)]
+  %\item 1939 AD
+  %\item 560 AD
+	%\item 0 year
+  %\item 2004 AD
+	%\item 2000 AD
+%\end{enumerate}
+%\end{tabular}
+%\end{minipage}
+%\end{question}
+%\begin{solution}
+%Jesus - 0 year\\
+%SWW - 1939\\
+%Madagascar cartoon - 2004\\
+%Second era - 2000
+%\end{solution}
+
+\chapter{}
+In this part of quiz there may be more than one answer.\\\\
+
+\begin{question}[type=exam]
+Yesyes\\
+\begin{enumerate}[a)]
+\item C4
+\item C3
+\item C1
+\item C2
+\item C5
+\item C6
+\end{enumerate}
+\end{question}
+\begin{solution}
+C2, C4, C5 are right answers
+\end{solution}
+
+%\begin{question}[type=exam]
+%What are you doing in your usual day?
+%\begin{enumerate}[a)]
+%\item Sleep
+%\item Fly
+%\item Work
+%\item Eat
+%\item Create light
+%\item Learn magic
+%\end{enumerate}
+%\end{question}
+%\begin{solution}
+%Sleep, work, eat
+%\end{solution}
+
+
+\chapter{}
+Fill gaps writing correct answer.\\\\
+
+
+%\begin{question}[type=exam]
+%What is the name and surname of person who first discovered America? When did he do it?
+%\end{question}
+%{\setstretch{2}
+%\blank[width=0.5\linewidth]{}~\\
+%}
+%\begin{solution}
+%Christopher Columb
+%\end{solution}
+
+
+\chapter{}
+
+\begin{question}[type=exam]
+Blabla?\\
+\end{question}
+\setstretch{2}{\blank[width=0.12\linewidth]{}~\\ 
+}\begin{solution}
+Blabla
+\end{solution}
+
+%\begin{question}[type=exam]
+%\begin{center}
+%{\huge Pancakes are the best}
+%\end{center}
+%* Some text *\\
+%\lipsum[7-9]
+%\end{question}
+%\begin{solution}
+%* Some example essay *
+%\end{solution}
+
+
+\chapter{}
+This chapter is for filling answers for questions. Write them carefully, results will be checked by computer.
+
+\begin{flushleft}
+\begin{minipage}{\linewidth}
+%1-5
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+Chapter 2\\
+Verified by computer\\
+\end{center}
+\hspace{30pt} a\hspace{3pt} b\hspace{3pt} c\hspace{3pt} d\hspace{3pt} e\hspace{3pt} %\hspace{30pt} a\hspace{3pt} b\hspace{3pt} c %22pt
+\begin{enumerate}
+  \itemsep0em
+\setcounter{enumi}{0}
+\item \fbox{
+\mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} 
+}
+	
+	%\item \fbox{
+		%\mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}}
+		%}
+		
+\end{enumerate}
+\hspace{25pt} T\hspace{3pt} F%30pt
+\begin{enumerate}
+  \itemsep0em
+	
+\setcounter{enumi}{1}
+\item \fbox{\mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}}}
+	
+	%\item \fbox{
+		%\mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}}
+		%}
+		
+\end{enumerate}
+\end{minipage}
+\hfill %?
+%6-7
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+Chapter 3\\
+Verified by computer\\
+\end{center}
+\begin{tabular}{|p{\textwidth}}
+\begin{enumerate}
+
+\setcounter{enumi}{2}
+\item \fbox{
+\begin{minipage}{10em}
+\hspace{22pt} a\hspace{3pt} b\hspace{3pt} c\hspace{3pt} d\hspace{3pt} e
+\begin{enumerate}[1]
+\itemsep0em
+\setcounter{enumi}{0}
+\item \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}}
+\item \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}}
+\item \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}}
+\item \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}}
+\end{enumerate}
+\end{minipage}
+}
+\setcounter{enumi}{2}
+
+	%\setcounter{enumi}{5}
+  %\item \fbox{
+		%\begin{minipage}{10em}
+		%\hspace{22pt} a\hspace{3pt} b\hspace{3pt} c\hspace{3pt} d\hspace{3pt} e
+		%\begin{enumerate}[1]
+		%\itemsep0em
+		%\setcounter{enumi}{0}
+		%\item \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}}
+		%\item \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}}
+		%\item \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}}
+		%\item \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}}
+		%\end{enumerate}
+		%\end{minipage}
+		%}
+		
+\end{enumerate}
+\end{tabular}
+\end{minipage}\\
+\blank[width=\linewidth]{}~\\
+\end{minipage}
+
+\begin{minipage}{\linewidth}
+\begin{center}
+Chapter 4\\
+Verified by computer\\
+\end{center}
+
+\hspace{25pt} a\hspace{3pt} b\hspace{3pt} c\hspace{3pt} d\hspace{3pt} e\hspace{3pt} f\hspace{3pt} 
+\setcounter{enumi}{9}
+
+%\hspace{30pt} a\hspace{3pt} b\hspace{3pt} c\hspace{3pt} d\hspace{3pt} e\hspace{3pt} f %22pt
+
+\begin{enumerate}
+  \itemsep0em
+	
+\setcounter{enumi}{3}
+\item \fbox{\mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} }
+	
+	%\setcounter{enumi}{7}
+	%\item \fbox{
+		%\mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}} \mbox{\ooalign{$\square$}}
+		%}
+		
+\end{enumerate}
+\blank[width=\linewidth]{}~\\
+\end{minipage}
+
+%8-9
+\begin{minipage}{\linewidth}
+\begin{center}
+Chapter 5\\
+Verified by human\\
+\end{center}
+
+
+\setcounter{enumi}{4}
+
+%\setcounter{enumi}{7}
+%\item{
+%\blank[width=2.5\linewidth]{}~\\
+%}
+
+\blank[width=\linewidth]{}~\\
+\end{minipage}
+
+%essay
+\begin{minipage}{\linewidth}
+\begin{center}
+Chapter 6\\
+Verified by human\\
+\end{center}
+\hspace{22pt}
+\setstretch{2}{
+
+\setcounter{enumi}{4}
+\blank[width=0.12\linewidth]{}~\
+%\blank[width=9.5\linewidth]{}~\\
+
+}
+\end{minipage}
+\end{flushleft}
+
+\chapter{}
+QUIZ PARTICIPANT CAN'T HAVE ACCESS TO THIS CHAPTER BEFORE AND DURING QUIZ. IT IS FOR ANSWERS CHECKING AFTER QUIZ.\\\\
+\printsolutions
+
+\end{document}
